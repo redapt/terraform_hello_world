@@ -1,0 +1,15 @@
+# Compiled files
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+*.tfstate.lock.info
+*.plan
+
+# Potentially sensitive information in vars
+*.tfvars
+
+# Module directory
+.terraform/
+
+# Mac meta
+.DS_Store

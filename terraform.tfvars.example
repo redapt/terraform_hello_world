@@ -1,0 +1,22 @@
+public_key_file  = "~/.ssh/id_rsa.pub"
+cluster_size     = "3"
+
+### OS Vars
+os_auth_url         = "https://my.metacloud.net:5000/v3"
+os_region           = "public"
+image_name          = "Container-Linux"
+flavor_name         = "m1.medium"
+ssh_key_pair_name   = "my-key"
+security_group_ids  = [ "12312312-1231-1231-1231-123123123123" ]
+network_id          = "12312312-1231-1231-1231-123123123123123"
+
+### AWS Vars
+access_key = "my-access-key"
+secret_key = "my-secret-key"
+aws_region = "us-west-2"
+
+### Azure Vars
+subscription_id = "my-subscription-id"
+client_id       = "my-client-id"
+client_secret   = "my-client-secret"
+tenant_id       = "tenant_id"
