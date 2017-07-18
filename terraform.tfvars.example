@@ -1,4 +1,5 @@
 public_key_file  = "~/.ssh/id_rsa.pub"
+public_key_file  = "~/.ssh/id_rsa"
 cluster_size     = "3"
 
 ### OS Vars

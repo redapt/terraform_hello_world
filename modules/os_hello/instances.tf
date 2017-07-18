@@ -28,5 +28,19 @@ resource "openstack_compute_instance_v2" "hello_cluster" {
     port = "${ element(openstack_networking_port_v2.ips.*.id, count.index) }"
   }
 
+  connection {
+    agent = "true"
+    type = "ssh"
+    host = "${ element(openstack_networking_port_v2.ips.*.all_fixed_ips.0, count.index) }"
+    user = "core"
+    private_key = "${ file(var.private_key_file) }"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo echo DO SOMETHING ON THE VM"
+    ]
+  }
+
   user_data = "${ element(data.template_file.cloud-config.*.rendered, count.index) }"
 }
