@@ -14,6 +14,14 @@ Path to public key file to use on VM instances for ssh access.
 EOF
 }
 
+variable "private_key_file" {
+  type = "string"
+
+  description = <<EOF
+Path to private ssh key file to use on VM instances for remote provisioning steps.
+EOF
+}
+
 variable "cluster_size" {
   type = "string"
 

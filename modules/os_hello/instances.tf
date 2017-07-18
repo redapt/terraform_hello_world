@@ -25,7 +25,7 @@ resource "openstack_compute_instance_v2" "hello_cluster" {
   key_pair = "${ var.ssh_key_pair_name }"
 
   network {
-    port = "${ element(openstack_networking_port_v2.ips.*.id, count.index+1) }"
+    port = "${ element(openstack_networking_port_v2.ips.*.id, count.index) }"
   }
 
   user_data = "${ element(data.template_file.cloud-config.*.rendered, count.index) }"

@@ -1,6 +1,7 @@
 variable "os_cluster_size" { }
 variable "os_auth_url" { }
 variable "public_key_file" { }
+variable "private_key_file" { }
 variable "os_region" { }
 variable "image_name" { }
 variable "flavor_name" { }
@@ -24,6 +25,7 @@ module "os_hello" {
   source = "./modules/os_hello"
 
   public_key_file = "${ var.public_key_file }"
+  private_key_file = "${ var.private_key_file }"
   os_auth_url = "${ var.os_auth_url }"
   cluster_size = "${ var.os_cluster_size }"
   region = "${ var.os_region }"
@@ -33,7 +35,7 @@ module "os_hello" {
   security_group_ids = "${ var.security_group_ids }"
   network_id = "${ var.network_id }"
 }
-
+/*
 module "aws_hello" {
   source = "./modules/aws_hello"
 
@@ -51,12 +53,12 @@ module "azure_hello" {
   azure_tenant_id       = "${ var.tenant_id }"
   os_admin_password     = "${ var.os_admin_password }"
 }
-
+*/
 #####################################################################
 output "os_hello_endpoints" {
   value = [ "${ module.os_hello.hello_endpoints }" ]
 }
-
+/*
 output "aws_hello_endpoints" {
   value = [ "${ module.aws_hello.aws_hello_endpoint }" ]
 }
@@ -64,3 +66,4 @@ output "aws_hello_endpoints" {
 output "azure_hello_endpoints" {
   value = [ "${ module.azure_hello.azure_hello_endpoint }" ]
 }
+*/
