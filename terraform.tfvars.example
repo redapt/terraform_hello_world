@@ -1,4 +1,5 @@
 public_key_file  = "~/.ssh/id_rsa.pub"
+public_key_file  = "~/.ssh/id_rsa"
 cluster_size     = "3"
 
 ### OS Vars
@@ -9,6 +10,15 @@ flavor_name         = "m1.medium"
 ssh_key_pair_name   = "my-key"
 security_group_ids  = [ "12312312-1231-1231-1231-123123123123" ]
 network_id          = "12312312-1231-1231-1231-123123123123123"
+
+### CloudStack vars
+cloudstack_api_url               = "https://cloudstack.redaptcloud.com/client/api"
+cloudstack_api_key               = "my-api-key"
+cloudstack_secret_key            = "my-secret-key"
+cloudstack_service_offering      = "my-service-offering"
+cloudstack_network_id            = "my-network-id"
+cloudstack_template              = "my-template"
+cloudstack_zone                  = "my-zone"
 
 ### AWS Vars
 access_key = "my-access-key"
