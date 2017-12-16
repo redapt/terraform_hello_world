@@ -13,13 +13,13 @@ variable "access_key" { }
 variable "secret_key" { }
 variable "aws_region" { }
 
-variable cloudstack_api_url { }
-variable cloudstack_api_key { }
-variable cloudstack_secret_key { }
-variable cloudstack_service_offering { }
-variable cloudstack_network_id { }
-variable cloudstack_template { }
-variable cloudstack_zone { }            
+variable "cloudstack_api_url" { }
+variable "cloudstack_api_key" { }
+variable "cloudstack_secret_key" { }
+variable "cloudstack_service_offering" { }
+variable "cloudstack_network_id" { }
+variable "cloudstack_template" { }
+variable "cloudstack_zone" { }            
 
 variable "subscription_id" { }
 variable "client_id" { }
