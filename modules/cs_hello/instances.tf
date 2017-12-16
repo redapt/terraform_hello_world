@@ -6,6 +6,7 @@ provider "cloudstack" {
 
 resource "cloudstack_instance" "hello" {
   name             = "hello-world"
+  expunge          = "true"
   service_offering = "${var.cloudstack_service_offering}"
   network_id       = "${var.cloudstack_network_id}"
   template         = "${var.cloudstack_template}"
